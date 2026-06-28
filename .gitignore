@@ -1,0 +1,3 @@
+git clone --mirror https://github.com/SanJuanPabloIIPomoca/SanJuanPabloIIPomoca.github.io.git
+cd SanJuanPabloIIPomoca.github.io.git
+git push --mirror https://github.com/ChrisMXCloud/tu-nuevo-repo.git
