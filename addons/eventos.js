@@ -69,14 +69,14 @@ const eventos = [
     // MARTES
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 8:00 AM",
         dia:2,
         hora:"08:00",
         duracion:DURACION_MISA
     },
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa 7:00 PM",
         dia:2,
         hora:"19:00",
         duracion:DURACION_MISA
@@ -156,7 +156,7 @@ const eventos = [
 // CARGAR EVENTOS ESPECIALES DESDE JSON
 // ============================================
 
-fetch("eventos-especiales.json")
+fetch("https://sanjuanpabloiipomoca.org/eventos-especiales.json")
 .then(respuesta => respuesta.json())
 .then(datos => {
 
