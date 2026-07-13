@@ -86,14 +86,14 @@ const eventos = [
     // MIÉRCOLES
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 8:00 AM",
         dia:3,
         hora:"08:00",
         duracion:DURACION_MISA
     },
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 7:00 PM",
         dia:3,
         hora:"19:00",
         duracion:DURACION_MISA
@@ -103,14 +103,14 @@ const eventos = [
     // JUEVES
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 8:00 AM",
         dia:4,
         hora:"08:00",
         duracion:DURACION_MISA
     },
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 7:00 PM",
         dia:4,
         hora:"19:00",
         duracion:DURACION_MISA
@@ -127,14 +127,14 @@ const eventos = [
     // VIERNES
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 8:00 AM",
         dia:5,
         hora:"08:00",
         duracion:DURACION_MISA
     },
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 7:00 PM",
         dia:5,
         hora:"19:00",
         duracion:DURACION_MISA
@@ -144,7 +144,7 @@ const eventos = [
     // SÁBADO
 
     {
-        nombre:"Santa Misa",
+        nombre:"Santa Misa de 7:00 PM",
         dia:6,
         hora:"19:00",
         duracion:DURACION_MISA
