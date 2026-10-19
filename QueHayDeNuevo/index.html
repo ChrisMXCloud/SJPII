@@ -1,91 +1,27 @@
+<!DOCTYPE html>
 <html class="no-js" lang="es">
 <head>
     <meta charset="utf-8">
     <title>Parroquia San Juan Pablo II</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-          href="https://sanjuanpabloiipomoca.org/addons/base.css">
-    <link rel="stylesheet"
-          href="https://sanjuanpabloiipomoca.org/addons/main.css">
-    <script src="https://sanjuanpabloiipomoca.org/addons/modernizr.js"></script>
-    <script src="https://sanjuanpabloiipomoca.org/addons/eventos.js"></script>
-    <link rel="icon"
-          href="https://sanjuanpabloiipomoca.org/images/SanJuanPabloII.png"
-          type="image/png">
-    <style>
 
-        /* =========================================
-           SECCIÓN INFORMACIÓN
-        ========================================== */
+    <!-- Interfaz -->
+    <link rel="stylesheet" href="../addons/base.css">
+    <link rel="stylesheet" href="../addons/main.css">
 
-        .s-info {
-            padding: 80px 0;
-        }
-
-
-        /* CONTENEDOR DE LAS DOS COLUMNAS */
-
-        .s-info .info-content {
-            display: flex;
-            align-items: center;
-        }
-
-
-        /* IMAGEN */
-
-        .s-info .info-image {
-            width: 100%;
-        }
-
-        .s-info .info-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 12px;
-        }
-
-
-        /* TEXTO */
-
-        .s-info .info-text {
-            padding: 30px;
-        }
-
-        .s-info .info-text h2 {
-            margin-bottom: 20px;
-        }
-
-        .s-info .info-text p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-
-
-        /* =========================================
-           CELULARES
-        ========================================== */
-
-        @media only screen and (max-width: 768px) {
-
-            .s-info .info-content {
-                display: block;
-            }
-
-            .s-info .info-text {
-                padding: 30px 0 0;
-            }
-
-        }
-
-    </style>
-
+    <!-- JavaScript -->
+    <script src="../addons/modernizr.js"></script>
+    <script src="../addons/jquery-3.2.1.min.js"></script>
+    <script src="../addons/plugins.js"></script>
+    <script src="../addons/main.js"></script>
+    
+    <!-- Icono del Sitio Web -->
+    <link rel="icon" href="../images/SanJuanPabloII.png" type="image/png">
+    
 </head>
 <body id="top">
 
-    <!-- =========================================
-         PRELOADER
-    ========================================== -->
+    <!-- Pantalla de Carga -->
     <div id="preloader">
         <div id="loader" class="dots-jump">
             <div></div>
@@ -94,28 +30,21 @@
         </div>
     </div>
 
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- Barra de Navegacion -->
     <header class="s-header">
-        <a class="header-menu-toggle"
-           href="#">
+        <a class="header-menu-toggle" href="#">
             <span>Menu</span>
         </a>
         <div class="header-logo">
-            <a class="site-logo"
-               href="#">
-                <img
-                    src="https://sanjuanpabloiipomoca.org/images/SJPII2.png"
+            <a class="site-logo" href="#">
+                <img src="../images/SJPII2.png"
                     alt="Parroquia San Juan Pablo II">
             </a>
         </div>
         <nav class="header-nav-wrap">
             <ul class="header-nav">
-                <li>
-                    <a href="https://SanJuanPabloIIPomoca.org">
-                        Inicio
-                    </a>
+                <li class="current smoothscroll">
+                    <a href="#inicio">Inicio</a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/ParroquiaSanJuanPabloII.Pomoca">
@@ -124,37 +53,29 @@
                 </li>
                 <li>
                     <a href="https://diocesisdetabasco.org.mx/">
-                        Diócesis de Tabasco
+                        Nuestra Diócesis de Tabasco
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
 
-
-
-    <!-- =========================================
-         HERO
-    ========================================== -->
+    <!-- Inicio -->
     <section class="s-hero"
         data-parallax="scroll"
-        data-image-src="https://sanjuanpabloiipomoca.org/images/Background.jpg"
+        data-image-src="../images/background.png"
         data-natural-width="3000"
         data-position-y="center">
         <div class="row hero-content">
             <div class="column large-full hero-content__text">
-                <h1>
-                    Parroquia San Juan Pablo II
-                </h1>
-                <p class="lead"
-                   style="color:#FFF!important;">
+                <h1>Parroquia San Juan Pablo II</h1>
+                <p class="lead" style="color:#FFF!important;">
                     ¡No tengáis miedo!<br>
                     Abrid de par en par las puertas a Cristo.
                 </p>
             </div>
         </div>
     </section>
-
     
   <section id="inicio" class="s-about">
         <div class="row info-content">
@@ -208,47 +129,194 @@
         </div>
     </section>
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
 
-    <footer class="s-footer">
-        <div class="row footer-top">
+    <section id="eventosdefiestapatronal" class="s-events" style="padding: 4rem 0; color: #333;">
+
+        <div class="row events-header" style="text-align: center; margin-bottom: 3rem;">
             <div class="column large-full">
-                <h4 class="MoonBold">
-                    Parroquia San Juan Pablo II
-                </h4>
-                <p>
-                    Fracc. Pomoca, Nacajuca, Tabasco · México
-                </p>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">FIESTA PATRONAL EN HONOR A SAN JUAN PABLO II</h2>
+                <p style="font-size: 1.5rem; color: #cc0000; font-weight: bold;">Del 16 al 25 de Octubre del 2026.</p>
             </div>
         </div>
-        <div class="row footer-bottom">
-            <div class="column">
-                <span>
 
-                    &copy; 2025 - 2026 Parroquia San Juan Pablo II
-
-                </span>
+        <div class="row" style="margin-bottom: 3rem;">
+            <div class="column large-full" style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #7d1c24;">
+                <h3 style="color: #cc0000; text-align: center; margin-bottom: 1.5rem;">ACTIVIDADES DIARIAS DURANTE EL DECENARIO</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li><strong>7:00 AM:</strong> Misa con Laudes/Mañanitas</li>
+                    <li><strong>3:00 PM:</strong> Exposición con el Santísimo Coronilla de la Misericordia</li>
+                    <li><strong>6:00 PM:</strong> Peregrinación con la Imagen de San Juan Pablo II (Punto de reunión 5:30 pm en la cancha de Básquetball frente al kínder)</li>
+                    <li><strong>7:00 PM:</strong> Santa Misa</li>
+                    <li><strong>8:00 PM:</strong> Cultural en la cancha de Básquetball</li>
+                </ul>
             </div>
         </div>
-        <div class="ss-go-top">
-            <a class="smoothscroll"
-               href="#top">
-                <svg width="24"
-                     height="24">
-                    <path d="M12 0l8 9h-6v15h-4V9H4z"/>
-                </svg>
-            </a>
+
+        <div class="row">
+            <div class="column large-full">
+
+                <!-- VIERNES 16 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">VIERNES 16 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> La Comunidad Parroquial</p>
+                        <p><strong>Inauguración de Nuestra Fiesta Patronal.</strong></p>
+                        <p><strong>Invitados:</strong> Los seminaristas del Grupo de Vida San Juan Pablo II, del Seminario Mayor.</p>
+                        <p><strong>Misa:</strong> 7:00 pm. Inauguración y corte de listón.</p>
+                    </div>
+                </div>
+
+                <!-- SÁBADO 17 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">SÁBADO 17 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> ADNOMEX</p>
+                        <p><strong>Sector Invitado:</strong> Av. Samarkanda, C. Tenochtitlan, Chichen-Itzá, Av. del Sureste, Privada las Flores, Privada las Aves, C. Tulum, Tikal, Tula y Bonampak.</p>
+                        <p><strong>9:00 am:</strong> Inicio de la Cabalgata en la cancha del Cedro, frente a la entrada del Camarón.</p>
+                        <p><strong>2:00 pm:</strong> Bodas colectivas.</p>
+                        <p><strong>4:00 pm:</strong> Vigilia Patronal, 8vo. Aniversario de Fundación (Junta de turno en Ermita Ntra. Sra. Guadalupe).</p>
+                        <p><strong>Foro cultural:</strong> OSEANA Ballet From Studio.</p>
+                    </div>
+                </div>
+
+                <!-- DOMINGO 18 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">DOMINGO 18 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Ermita Ntra. Sra. de Guadalupe.</p>
+                        <p><strong>7:00 am:</strong> Kermes Parroquial.</p>
+                        <p><strong>12:00 pm:</strong> Renovación e Imposición de Sotanas de los Monaguillos.</p>
+                        <p><strong>1:15 pm:</strong> Primera Comunión.</p>
+                        <p><strong>Foro Cultural:</strong> Grupo Instructores de Zumba / Cantante</p>
+                    </div>
+                </div>
+
+                <!-- LUNES 19 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">LUNES 19 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Renovación</p>
+                        <p><strong>Sector Invitado:</strong> Av. Samarkanda sobre Av. del Sureste hasta Paseo del Jaguar, Privada del Bosque.</p>
+                        <p><strong>Parroquia Invitada:</strong> San Miguel Arcángel Guacimo, Pbro. José Antonio Jiménez Osorio.</p>
+                        <p><strong>Foro Cultural:</strong> Lunas Academia.</p>
+                    </div>
+                </div>
+
+                <!-- MARTES 20 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">MARTES 20 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Pastoral Social y Llama de Amor.</p>
+                        <p><strong>Sector Invitado:</strong> Av. Paseo del Jaguar y Allegro</p>
+                        <p><strong>Parroquia Invitada:</strong> San Antonio de Padua, Col. Tierra colorada.</p>
+                        <p><strong>Pbro.:</strong> Ricardo Alberto Morales Gómez.</p>
+                        <p><strong>Foro Cultural:</strong> Tania Villegas Academia Ballet y Mtra. Cana Fernández Fitness.</p>
+                    </div>
+                </div>
+
+                <!-- MIÉRCOLES 21 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">MIÉRCOLES 21 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Arcoiris.</p>
+                        <p><strong>Sector Invitado:</strong> Pie de Casa.</p>
+                        <p><strong>Parroquia Invitada:</strong> Nuestra Sra. de Guadalupe y San Juan Diego, Fracc. Bosques de Saloya.</p>
+                        <p><strong>Pbro.:</strong> Jorge Armando Javier Ramos.</p>
+                        <p><strong>Foro Cultural:</strong> Grupo instructores de Zumba.</p>
+                    </div>
+                </div>
+
+                <!-- JUEVES 22 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">JUEVES 22 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Legión de María y Adoración Perpetua.</p>
+                        <p><strong>Sector Invitado:</strong> C. Mojina, Tilapia, Siglo XXI y Privada Pomoca.</p>
+                        <p><strong>11:00 am:</strong> Misa de Unción de Enfermos.</p>
+                        <p><strong>7:00 pm:</strong> Misa Solemne en Honor a Nuestro San Patrono San Juan Pablo II.</p>
+                        <p><strong>Parroquia Invitada:</strong> Santa Cruz, Ejido Lomitas</p>
+                        <p><strong>Pbro.:</strong> Jesús Esteban Contreras Méndez.</p>
+                        <p><strong>Foro cultural:</strong> Esc. de Danza Xochipilli.</p>
+                    </div>
+                </div>
+
+                <!-- VIERNES 23 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">VIERNES 23 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Pastoral Juvenil.</p>
+                        <p><strong>Sector Invitado:</strong> C. De la Guabina y C. Mojarra.</p>
+                        <p><strong>12:00 pm:</strong> Misa Concelebrada con Párrocos invitados.</p>
+                        <p><strong>Parroquia Invitada:</strong> Señor de la Pasión De La Buena Suerte, Azucena Cárdenas, <strong>Pbro.:</strong> Santiago Clemente Velázquez.</p>
+                        <p><strong>Parroquia Invitada:</strong> Misa 7:00pm San Miguel Arcángel, Poblado Ayapa, Jalpa de Méndez</p>
+                        <p><strong>Pbro.:</strong> José Concepción Javier de la Cruz.</p>
+                    </div>
+                </div>
+
+                <!-- SÁBADO 24 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">SÁBADO 24 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Pastoral Profetica.</p>
+                        <p><strong>Sector Invitado:</strong> Privada Cedro hasta la Privada Amate.</p>
+                        <p><strong>9:00 am:</strong> Misa Enrama Infantil / Feria de la Catequesis.</p>
+                        <p><strong>Foro Cultural:</strong> Esc. de Danza Xochipilli.</p>
+                    </div>
+                </div>
+
+                <!-- DOMINGO 25 DE OCTUBRE -->
+                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">DOMINGO 25 DE OCTUBRE</div>
+                    <div style="padding: 1.5rem; background: #fff;">
+                        <p><strong>Anfitriones:</strong> Liturgia.</p>
+                        <p><strong>Sector Invitado:</strong> C. Pochitoque, Pejelagarto, Cangrejo, Hicotea, Guao, Paseo Corralillo, Cto. la Pigua, Cto. Tres Lomos, Popiste, Cholul, Chipicoy, Tinto, Jobo, Bojón y Cocohite.</p>
+                        <p><strong>9:00 am:</strong> Enrama Parroquial, punto de reunión entrada de Pomoca.</p>
+                        <p><strong>7:00 pm:</strong> Confirmaciones. Preside Mons. Gerardo de Jesús Rojas López</p>
+                        <p>Peregrinación con velas al finalizar la Santa Misa.</p>
+                        <hr style="margin: 1rem 0; border: 0; border-top: 1px solid #eee;">
+                        <p style="text-align: center; margin-top: 1rem;">
+                            <strong>Invitan:</strong><br>
+                            Pbro. Bartolo Emmanuel Montejos Almeyda<br>
+                            Pbro. Miguel Ángel Mendoza Hernández<br>
+                            y Consejo Parroquial.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </footer>
+    </section>
+    
+<!-- Footer -->
+<footer class="s-footer">
+    <div class="row footer-top">
+        <div class="column large-full">
+            <h4 class="MoonBold">
+                Parroquia San Juan Pablo II
+            </h4>
+            <p>
+                Fracc. Pomoca, Nacajuca, Tabasco · México
+            </p>
+        </div>
+    </div>
 
-    <!-- =========================================
-         SCRIPTS
-    ========================================== -->
-
-    <script src="https://sanjuanpabloiipomoca.org/addons/jquery-3.2.1.min.js"></script>
-    <script src="https://sanjuanpabloiipomoca.org/addons/plugins.js"></script>
-    <script src="https://sanjuanpabloiipomoca.org/addons/main.js"></script>
+    <!-- Copyright -->
+    <div class="row footer-bottom">
+        <div class="column">
+            <span>
+                &copy; 2025 - 2026 Parroquia San Juan Pablo II
+            </span>
+        </div>
+    </div>
+    
+    <!-- Botón de regreso para arriba -->
+    <div class="ss-go-top">
+        <a class="smoothscroll" href="#top">
+            <svg width="24" height="24">
+                <path d="M12 0l8 9h-6v15h-4V9H4z"/>
+            </svg>
+        </a>
+    </div>
+</footer>
 </body>
 </html>
