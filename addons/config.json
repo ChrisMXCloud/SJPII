@@ -1,4 +1,3 @@
-
 {
   "version": 1,
   "activo": true,
@@ -32,7 +31,7 @@
     "chrisworld.ink": {
       "nombre": "ChrisWorld™",
       "titulo": "¡Bienvenido a nuestra parroquia!",
-      "mensaje": "Gracias a ChrisWorld™ por ayudarte a descubrir nuestra página oficial. 🙏	"
+      "mensaje": "Gracias a ChrisWorld™ por ayudarte a descubrir nuestra página oficial. 🙏"
     },
     "facebook.com": {
       "nombre": "Facebook",
