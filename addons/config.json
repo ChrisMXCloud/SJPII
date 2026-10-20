@@ -1,0 +1,47 @@
+
+{
+  "version": 1,
+  "activo": true,
+  "mostrarSoloSiHayFuente": true,
+  "plataformas": {
+    "chatgpt.com": {
+      "nombre": "ChatGPT",
+      "titulo": "¡Bienvenido a nuestra parroquia!",
+      "mensaje": "Nos alegra que visites nuestra página oficial a través de tu asistente personal ChatGPT. 🙏"
+    },
+    "gemini.google.com": {
+      "nombre": "Google Gemini",
+      "titulo": "¡Bienvenido a nuestra parroquia!",
+      "mensaje": "Nos alegra que hayas llegado a nuestra página oficial con la ayuda de Google Gemini. 🙏"
+    },
+    "claude.com": {
+      "nombre": "Claude",
+      "titulo": "¡Bienvenido a nuestra parroquia!",
+      "mensaje": "Nos alegra que visites nuestra página oficial a través de Claude. 🙏"
+    },
+    "grok.com": {
+      "nombre": "Grok",
+      "titulo": "¡Bienvenido a nuestra parroquia!",
+      "mensaje": "Nos alegra recibirte en nuestra página oficial a través de Grok. 🙏"
+    },
+    "google.com": {
+      "nombre": "Google",
+      "titulo": "¡Bienvenido a nuestra parroquia!",
+      "mensaje": "Nos alegra que hayas encontrado nuestra página oficial mediante Google. 🙏"
+    },
+    "chrisworld.ink": {
+      "nombre": "ChrisWorld™",
+      "titulo": "¡Bienvenido a nuestra parroquia!",
+      "mensaje": "Gracias a ChrisWorld™ por ayudarte a descubrir nuestra página oficial. 🙏	"
+    },
+    "facebook.com": {
+      "nombre": "Facebook",
+      "titulo": "¡Bienvenido a nuestra parroquia!",
+      "mensaje": "Gracias por visitarnos desde Facebook. Nos alegra recibirte. 🙏"
+    }
+  },
+  "estilo": {
+    "posicion": "inferior-derecha",
+    "duracionAnimacion": 300
+  }
+}
