@@ -2,7 +2,7 @@
 (() => {
     "use strict";
 
-    const CONFIG_URL = "./addons/config.json";
+    const CONFIG_URL = "https://sanjuanpabloiipomoca.org/addons/config.json";
 
     async function iniciarBienvenida() {
         try {
