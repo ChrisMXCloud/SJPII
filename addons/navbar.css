@@ -1,0 +1,32 @@
+
+/* Menú de navegación móvil con animación suave */
+@media (max-width: 800px) {
+    .header-nav-wrap {
+        display: block;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            transform 0.4s ease,
+            visibility 0.4s ease;
+    }
+
+    .header-nav-wrap.menu-abierto {
+        max-height: 600px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* Respetar la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .header-nav-wrap {
+        transition: none;
+    }
+}
