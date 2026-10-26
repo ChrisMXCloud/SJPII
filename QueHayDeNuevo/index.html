@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../addons/base.css">
     <link rel="stylesheet" href="../addons/main.css">
     <link rel="stylesheet" href="../addons/navbar.css">
+    <link rel="stylesheet" href="../addons/solicitud.css">
 
     <!-- JavaScript -->
     <script src="../addons/modernizr.js"></script>
@@ -16,6 +17,7 @@
     <script src="../addons/plugins.js"></script>
     <script src="../addons/main.js"></script>
     <script src="../addons/navbar.js"></script>
+    <script src="../addons/bienvenida.js" defer></script>
     
     <!-- Icono del Sitio Web -->
     <link rel="icon" href="../images/SanJuanPabloII.png" type="image/png">
@@ -131,46 +133,126 @@
         </div>
     </section>
 
+<section id="eventosdefiestapatronal" class="s-events" style="padding: 4rem 0; color: #333;">
+<!-- Solicitud de Servicio -->
+<section class="solicitud-servicio" id="solicitudServicio">
 
-     <section id="eventosdefiestapatronal" class="s-events" style="padding: 4rem 0; color: #333;">
+  <div class="solicitud-layout">
 
-        <!-- Encabezado -->
-        <div class="row events-header" style="text-align: center; margin-bottom: 3rem;">
-            <div class="column large-full">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">
-                    FIESTA PATRONAL EN HONOR A SAN JUAN PABLO II
-                </h2>
-                <p style="font-size: 1.5rem; color: #cc0000; font-weight: bold;">
-                    Del 16 al 25 de octubre de 2026.
-                </p>
-            </div>
-        </div>
+    <!-- Columna izquierda: logo e introducción -->
+    <div class="solicitud-cabecera">
 
-        <!-- Programa del domingo 25 de octubre -->
-        <div class="row">
-            <div class="column large-full">
-                <div style="margin-bottom: 2.5rem; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
-                    <div style="background: #7d1c24; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem;">
-                        DOMINGO 25 DE OCTUBRE
-                    </div>
-                    <div style="padding: 1.5rem; background: #fff;">
-                        <p><strong>Anfitriones:</strong> Liturgia.</p>
-                        <p><strong>Sector invitado:</strong> C. Pochitoque, Pejelagarto, Cangrejo, Hicotea, Guao, Paseo Corralillo, Cto. la Pigua, Cto. Tres Lomos, Popiste, Cholul, Chipicoy, Tinto, Jobo, Bojón y Cocohite.</p>
-                        <p><strong>9:00 a. m.:</strong> Enrama parroquial, punto de reunión: entrada de Pomoca.</p>
-                        <p><strong>7:00 p. m.:</strong> Confirmaciones. Preside Mons. Gerardo de Jesús Rojas López.</p>
-                        <p>Peregrinación con velas al finalizar la Santa Misa.</p>
-                        <hr style="margin: 1rem 0; border: 0; border-top: 1px solid #eee;">
-                        <p style="text-align: center; margin-top: 1rem;">
-                            <strong>Invitan:</strong><br>
-                            Pbro. Bartolo Emmanuel Montejos Almeyda<br>
-                            Pbro. Miguel Ángel Mendoza Hernández<br>
-                            y Consejo Parroquial.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="solicitud-logo">
+        <img
+          src="../images/JxSJPII.svg"
+          alt="Logo de Juntos x San Juan Pablo II">
+      </div>
+
+      <div class="solicitud-intro">
+
+        <h2>Solicitud de servicio</h2>
+
+        <p class="solicitud-parroquia">
+          Parroquia San Juan Pablo II
+        </p>
+
+        <p style="margin: 0px; margin-bottom: 30px;" class="solicitud-descripcion">
+          ¿Te gustaría poner tus talentos al servicio
+          de Dios y de la comunidad? Completa esta solicitud.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- Columna derecha: formulario -->
+    <div class="solicitud-panel">
+
+
+
+      <form id="formSolicitudServicio">
+
+        <!-- Nombre completo -->
+        <label for="nombreServidor">
+          Nombre completo*
+        </label>
+
+        <input
+          id="nombreServidor"
+          name="nombre"
+          type="text"
+          autocomplete="name"
+          maxlength="120"
+          placeholder="Escribe tu nombre"
+          required>
+
+        <!-- Servicio solicitado -->
+        <label for="rolServidor">
+          Rol o servicio que te interesa*
+        </label>
+
+        <select
+          id="rolServidor"
+          name="rol"
+          required>
+
+          <option value="">Selecciona un servicio</option>
+          <option value="Lector">Lector</option>
+          <option value="Salmista">Salmista</option>
+          <option value="Comentarista">Comentarista</option>
+
+        </select>
+
+        <!-- Edad -->
+        <label for="edadServidor">
+          Edad*
+        </label>
+
+        <input
+          id="edadServidor"
+          name="edad"
+          type="number"
+          min="5"
+          max="120"
+          step="1"
+          inputmode="numeric"
+          placeholder="Tu edad"
+          required>
+
+        <!-- Consentimiento -->
+        <label class="privacidad" for="privacidadServidor">
+
+          <input
+            id="privacidadServidor"
+            name="privacidad"
+            type="checkbox"
+            required>
+
+          <span>
+            Acepto el uso de mis datos para gestionar esta solicitud.
+          </span>
+
+        </label>
+
+        <!-- Envío -->
+        <button type="submit">
+          Enviar solicitud
+        </button>
+
+        <!-- Nota informativa -->
+        <p style="font-size: 10px; padding: 11px;" class="solicitud-nota">
+          Se abrirá tu aplicación de correo para que puedas
+          revisar y enviar la solicitud.
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+</section>    
     
 <!-- Footer -->
 <footer style="height: 350px;" class="s-footer">
@@ -222,6 +304,48 @@
     aria-live="polite"
     hidden
 ></div>
-<script src="https://sanjuanpabloiipomoca.org/addons/bienvenida.js" defer></script>
+    
+<script>
+    document
+  .getElementById("formSolicitudServicio")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    if (!form.reportValidity()) return;
+
+    const nombre = document
+      .getElementById("nombreServidor").value.trim();
+
+    const rol = document
+      .getElementById("rolServidor").value;
+
+    const edad = document
+      .getElementById("edadServidor").value;
+
+    const asunto = "Solicitud de Servicio";
+
+    const mensaje = [
+      "Nueva solicitud de servicio parroquial",
+      "",
+      "Nombre: " + nombre,
+      "Rol solicitado: " + rol,
+      "Edad: " + edad,
+      "",
+      "Origen: Sitio web de la Parroquia San Juan Pablo II",
+      "Sección: ¿Qué hay de nuevo?",
+      "Sitio: https://www.sanjuanpabloiipomoca.org/"
+    ].join("\n");
+
+    const mailto =
+      "mailto:chris.mx.esp@gmail.com" +
+      "?subject=" + encodeURIComponent(asunto) +
+      "&body=" + encodeURIComponent(mensaje);
+
+    window.location.href = mailto;
+  });
+</script>
+    
 </body>
 </html>
