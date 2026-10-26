@@ -1,0 +1,119 @@
+
+/* Contenedor general */
+.solicitud-servicio {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+/* Dos columnas en PC */
+.solicitud-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Presentación izquierda */
+.solicitud-cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 1rem;
+  min-width: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Logo SVG: tamaño proporcional */
+.solicitud-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.solicitud-logo img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0;
+}
+
+/* Título y descripción */
+.solicitud-intro {
+  min-width: 0;
+  text-align: center;
+}
+
+.solicitud-cabecera h2 {
+  margin: 0 0 .5rem;
+}
+
+.solicitud-cabecera p {
+  margin: 0 0 .75rem;
+  line-height: 1.6;
+}
+
+.solicitud-intro .solicitud-descripcion {
+  margin-bottom: 0;
+}
+
+/* Panel derecho */
+.solicitud-panel {
+  min-width: 0;
+  width: 100%;
+}
+
+.solicitud-etiqueta {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 12px 18px;
+  border: 2px solid #7d1c24;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Formulario */
+#formSolicitudServicio {
+  display: grid;
+  gap: .65rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Teléfonos y tabletas */
+@media (max-width: 700px) {
+  .solicitud-servicio {
+    padding: 1.25rem;
+  }
+
+  .solicitud-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .solicitud-cabecera {
+    padding: 0;
+  }
+
+  .solicitud-logo img {
+    max-width: 200px;
+  }
+
+  .solicitud-intro {
+    text-align: center;
+  }
+}
