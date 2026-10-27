@@ -1,0 +1,287 @@
+
+/* =========================================================
+   SECCIÓN GENERAL
+   ========================================================= */
+
+.solicitud-servicio {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   DISTRIBUCIÓN DE DOS COLUMNAS
+   ========================================================= */
+
+.solicitud-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 3rem;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Evita que los elementos ensanchen la cuadrícula */
+.solicitud-layout > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   COLUMNA IZQUIERDA: PRESENTACIÓN
+   ========================================================= */
+
+.solicitud-cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 1rem;
+  min-width: 0;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.solicitud-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.solicitud-logo img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0;
+}
+
+.solicitud-intro {
+  min-width: 0;
+  max-width: 100%;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.solicitud-cabecera h2 {
+  margin: 0 0 .5rem;
+}
+
+.solicitud-cabecera p {
+  margin: 0 0 .75rem;
+  line-height: 1.6;
+}
+
+.solicitud-intro .solicitud-descripcion {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   COLUMNA DERECHA: PANEL
+   ========================================================= */
+
+.solicitud-panel {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.solicitud-etiqueta {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 12px 18px;
+  border: 2px solid #7d1c24;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   FORMULARIO (POR SI SE UTILIZA EN OTRA SECCIÓN)
+   ========================================================= */
+
+#formSolicitudServicio {
+  display: grid;
+  gap: .65rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   FRASE DEL DÍA
+   ========================================================= */
+
+.solicitud-panel.frase-panel {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  justify-self: stretch;
+  align-self: start;
+  padding: 28px;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+}
+
+/* Todos los elementos internos respetan el ancho disponible */
+.frase-panel *,
+.frase-panel *::before,
+.frase-panel *::after {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Contenido oculto hasta que cargue el JSON */
+.frase-contenido[hidden] {
+  display: none;
+}
+
+/* Título principal */
+.frase-titulo {
+  margin: 0 0 24px;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* Cita bíblica */
+.frase-cita {
+  margin: 0;
+  padding: 8px 0 20px;
+  border: 0;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.8;
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Separador decorativo */
+.frase-separador {
+  width: 55px;
+  max-width: 55px;
+  height: 3px;
+  margin: 10px auto 24px;
+  padding: 0;
+  border-radius: 10px;
+  background: currentColor;
+  opacity: .25;
+}
+
+/* Subtítulos */
+.frase-subtitulo,
+.frase-proposito h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Reflexión */
+.frase-reflexion {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+/* Propósito integrado en la reflexión */
+.frase-proposito {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 24px;
+  padding: 17px;
+  border-radius: 12px;
+  background: rgba(128, 128, 128, .09);
+  overflow-wrap: anywhere;
+}
+
+.frase-proposito h4 {
+  margin-bottom: 8px;
+}
+
+.frase-proposito p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+/* Mensajes de carga y error */
+.frase-estado {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: anywhere;
+  opacity: .75;
+}
+
+/* =========================================================
+   TABLETAS Y TELÉFONOS
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .solicitud-servicio {
+    padding: 1.25rem;
+  }
+
+  .solicitud-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .solicitud-cabecera {
+    padding: 0;
+  }
+
+  .solicitud-logo img {
+    max-width: 200px;
+  }
+
+  .solicitud-intro {
+    text-align: center;
+  }
+
+  .solicitud-panel.frase-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .frase-titulo {
+    font-size: 21px;
+  }
+
+  .frase-cita {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .frase-reflexion,
+  .frase-proposito p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
