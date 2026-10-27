@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../addons/base.css">
     <link rel="stylesheet" href="../addons/main.css">
     <link rel="stylesheet" href="../addons/navbar.css">
-    <link rel="stylesheet" href="../addons/solicitud.css">
+    <link rel="stylesheet" href="../addons/day.css">
 
     <!-- JavaScript -->
     <script src="../addons/modernizr.js"></script>
@@ -18,6 +18,9 @@
     <script src="../addons/main.js"></script>
     <script src="../addons/navbar.js"></script>
     <script src="../addons/bienvenida.js" defer></script>
+    
+    <!-- Complementos -->
+    <link href="../addons/day.json">
     
     <!-- Icono del Sitio Web -->
     <link rel="icon" href="../images/SanJuanPabloII.png" type="image/png">
@@ -134,125 +137,44 @@
     </section>
 
 <section id="eventosdefiestapatronal" class="s-events" style="padding: 4rem 0; color: #333;">
-<!-- Solicitud de Servicio -->
-<section class="solicitud-servicio" id="solicitudServicio">
-
+    
+<section class="solicitud-servicio">
   <div class="solicitud-layout">
 
-    <!-- Columna izquierda: logo e introducción -->
+    <!-- COLUMNA IZQUIERDA -->
     <div class="solicitud-cabecera">
-
       <div class="solicitud-logo">
-        <img
-          src="../images/JxSJPII.svg"
-          alt="Logo de Juntos x San Juan Pablo II">
+        <img src="../images/JxSJPII.svg" alt="Juntos x San Juan Pablo II">
       </div>
 
       <div class="solicitud-intro">
-
-        <h2>Solicitud de servicio</h2>
-
-        <p class="solicitud-parroquia">
-          Parroquia San Juan Pablo II
-        </p>
-
-        <p style="margin: 0px; margin-bottom: 30px;" class="solicitud-descripcion">
-          ¿Te gustaría poner tus talentos al servicio
-          de Dios y de la comunidad? Completa esta solicitud.
-        </p>
-
+        <p>- PRESENTA -</p>
+      <p style="margin: 0px; margin-bottom: 5px; font-size: 18px;" class="solicitud-descripcion">
+      La inspiración de nuestro equipo<b> Juntos x San Juan Pablo </b>nos presenta esta sección de frases motivadoras y significantes para tu día, y esta es para tu día:
+      </p>
       </div>
-
     </div>
 
-    <!-- Columna derecha: formulario -->
-    <div class="solicitud-panel">
+    <!-- COLUMNA DERECHA: FRASE DEL DÍA -->
+    <div class="solicitud-panel frase-panel" id="fraseDelDia">
+      <div class="frase-contenido" id="fraseContenido" hidden>
 
-
-
-      <form id="formSolicitudServicio">
-
-        <!-- Nombre completo -->
-        <label for="nombreServidor">
-          Nombre completo*
-        </label>
-
-        <input
-          id="nombreServidor"
-          name="nombre"
-          type="text"
-          autocomplete="name"
-          maxlength="120"
-          placeholder="Escribe tu nombre"
-          required>
-
-        <!-- Servicio solicitado -->
-        <label for="rolServidor">
-          Rol o servicio que te interesa*
-        </label>
-
-        <select
-          id="rolServidor"
-          name="rol"
-          required>
-
-          <option value="">Selecciona un servicio</option>
-          <option value="Lector">Lector</option>
-          <option value="Salmista">Salmista</option>
-          <option value="Comentarista">Comentarista</option>
-
-        </select>
-
-        <!-- Edad -->
-        <label for="edadServidor">
-          Edad*
-        </label>
-
-        <input
-          id="edadServidor"
-          name="edad"
-          type="number"
-          min="5"
-          max="120"
-          step="1"
-          inputmode="numeric"
-          placeholder="Tu edad"
-          required>
-
-        <!-- Consentimiento -->
-        <label class="privacidad" for="privacidadServidor">
-
-          <input
-            id="privacidadServidor"
-            name="privacidad"
-            type="checkbox"
-            required>
-
-          <span>
-            Acepto el uso de mis datos para gestionar esta solicitud.
-          </span>
-
-        </label>
-
-        <!-- Envío -->
-        <button type="submit">
-          Enviar solicitud
-        </button>
-
-        <!-- Nota informativa -->
-        <p style="font-size: 10px; padding: 11px;" class="solicitud-nota">
-          Se abrirá tu aplicación de correo para que puedas
-          revisar y enviar la solicitud.
-        </p>
-
-      </form>
-
+        <blockquote class="frase-cita" id="fraseCita"></blockquote>
+        <div class="frase-separador"></div>
+        <h4 class="frase-subtitulo">Reflexión del día</h4>
+        <p class="frase-reflexion" id="fraseReflexion"></p>
+        <div class="frase-proposito">
+          <h4>Propósito del día</h4>
+          <p id="fraseProposito"></p>
+        </div>
+      </div>
+      <p class="frase-estado" id="fraseEstado" role="status">
+        Cargando la frase del día...
+      </p>
     </div>
-
   </div>
-
 </section>
-</section>    
+</section>
     
 <!-- Footer -->
 <footer style="height: 350px;" class="s-footer">
@@ -306,45 +228,60 @@
 ></div>
     
 <script>
-    document
-  .getElementById("formSolicitudServicio")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+(() => {
+  const contenedor = document.getElementById("fraseDelDia");
 
-    const form = event.currentTarget;
+  if (!contenedor) return;
 
-    if (!form.reportValidity()) return;
+  const contenido = document.getElementById("fraseContenido");
+  const cita = document.getElementById("fraseCita");
+  const reflexion = document.getElementById("fraseReflexion");
+  const proposito = document.getElementById("fraseProposito");
+  const estado = document.getElementById("fraseEstado");
 
-    const nombre = document
-      .getElementById("nombreServidor").value.trim();
+  // Obtener la fecha local, evitando diferencias por UTC.
+  function obtenerFechaLocal() {
+    const fecha = new Date();
+    const anio = fecha.getFullYear();
+    const mes = String(fecha.getMonth() + 1).padStart(2, "0");
+    const dia = String(fecha.getDate()).padStart(2, "0");
 
-    const rol = document
-      .getElementById("rolServidor").value;
+    return `${anio}-${mes}-${dia}`;
+  }
 
-    const edad = document
-      .getElementById("edadServidor").value;
+  fetch("../addons/day.json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("No se pudo cargar el archivo JSON.");
+      }
 
-    const asunto = "Solicitud de Servicio";
+      return response.json();
+    })
+    .then(datos => {
+      const fechaHoy = obtenerFechaLocal();
+      const frase = datos[fechaHoy];
 
-    const mensaje = [
-      "Nueva solicitud de servicio parroquial",
-      "",
-      "Nombre: " + nombre,
-      "Rol solicitado: " + rol,
-      "Edad: " + edad,
-      "",
-      "Origen: Sitio web de la Parroquia San Juan Pablo II",
-      "Sección: ¿Qué hay de nuevo?",
-      "Sitio: https://www.sanjuanpabloiipomoca.org/"
-    ].join("\n");
+      if (!frase) {
+        estado.textContent =
+          "La frase del día aún no está disponible, pero nuestro equipo no tarda mucho para realizarlo, gracias por la espera. 🙏";
+        return;
+      }
 
-    const mailto =
-      "mailto:chris.mx.esp@gmail.com" +
-      "?subject=" + encodeURIComponent(asunto) +
-      "&body=" + encodeURIComponent(mensaje);
+      // Insertar texto de forma segura.
+      cita.textContent = `“${frase["Frase del dia"]}”`;
+      reflexion.textContent = frase["Reflexion del dia"];
+      proposito.textContent = frase["Proposito del Dia"];
 
-    window.location.href = mailto;
-  });
+      contenido.hidden = false;
+      estado.hidden = true;
+    })
+    .catch(error => {
+      console.error("Error al cargar la frase del día:", error);
+
+      estado.textContent =
+        "No se pudo cargar la frase del día. Inténtalo más tarde.";
+    });
+})();
 </script>
     
 </body>
