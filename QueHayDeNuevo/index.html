@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../addons/main.css">
     <link rel="stylesheet" href="../addons/navbar.css">
     <link rel="stylesheet" href="../addons/day.css">
+    <link rel="stylesheet" href="../addons/radio.css">
 
     <!-- JavaScript -->
     <script src="../addons/modernizr.js"></script>
@@ -17,6 +18,7 @@
     <script src="../addons/plugins.js"></script>
     <script src="../addons/main.js"></script>
     <script src="../addons/navbar.js"></script>
+    <script src="../addons/radio.js"></script>
     <script src="../addons/bienvenida.js" defer></script>
     
     <!-- Complementos -->
@@ -84,11 +86,55 @@
         </div>
     </section>
     
-    <section id="inicio" class="s-about">
+    <section style="padding-top: 15rem; padding-bottom: 15rem;" id="inicio" class="s-about">
     <div class="row info-content">
     <div class="column large-6 medium-6 small-12">
     </div>
     </div>
+        
+        
+<div style="width: 90%;" class="radio-vatican">
+  <img style="width: 100%; max-width: 150px; max-height: 170px;"
+    class="radio-vatican__image"
+    src="../images/vatican.png"
+    alt="Radio de Vatican News"
+    width="378"
+    height="435"
+    loading="lazy"
+  >
+
+  <div class="radio-vatican__content">
+    <h3 style="font-size: 2.1rem;">Vatican News</h3>
+    <p style="font-size: 1.6rem;" class="radio-vatican__description">
+  Reproduce la sintonia de Vatican News, escucha musica clasica y informate de las noticias, comunicados y más del vaticano.
+    </p>
+
+    <audio
+      id="radio-vatican-audio"
+      preload="none"
+      src="http://radio.vaticannews.va:80/stream-es">
+      Tu navegador no admite la reproducción de audio.
+    </audio>
+
+    <button style="width: 100%; height: 6rem; min-height: 46px;"
+      type="button"
+      class="radio-vatican__button"
+      id="radio-vatican-play"
+      aria-controls="radio-vatican-audio"
+      aria-pressed="false">
+      <span id="radio-vatican-button-text">Reproducir</span>
+    </button>
+
+    <p style="font-size: 1.2rem;"
+      class="radio-vatican__status"
+      id="radio-vatican-status"
+      role="status"
+      aria-live="polite">
+      En Vivo ahora desde el Vaticano
+    </p>
+  </div>
+</div>
+
     </section>
 
 <section id="eventosdefiestapatronal" class="s-events" style="padding: 4rem 0; color: #333;">
@@ -164,61 +210,230 @@
     aria-live="polite"
     hidden
 ></div>
-<script>
     
+<script>
+
 (() => {
+  /* =========================================
+     FRASE DEL DÍA
+  ========================================= */
+
   const contenedor = document.getElementById("fraseDelDia");
 
-  if (!contenedor) return;
+  if (contenedor) {
+    const contenido = document.getElementById("fraseContenido");
+    const cita = document.getElementById("fraseCita");
+    const reflexion = document.getElementById("fraseReflexion");
+    const proposito = document.getElementById("fraseProposito");
+    const estado = document.getElementById("fraseEstado");
 
-  const contenido = document.getElementById("fraseContenido");
-  const cita = document.getElementById("fraseCita");
-  const reflexion = document.getElementById("fraseReflexion");
-  const proposito = document.getElementById("fraseProposito");
-  const estado = document.getElementById("fraseEstado");
+    // Obtener la fecha local, evitando diferencias por UTC.
+    function obtenerFechaLocal() {
+      const fecha = new Date();
+      const anio = fecha.getFullYear();
+      const mes = String(fecha.getMonth() + 1).padStart(2, "0");
+      const dia = String(fecha.getDate()).padStart(2, "0");
 
-  // Obtener la fecha local, evitando diferencias por UTC.
-  function obtenerFechaLocal() {
-    const fecha = new Date();
-    const anio = fecha.getFullYear();
-    const mes = String(fecha.getMonth() + 1).padStart(2, "0");
-    const dia = String(fecha.getDate()).padStart(2, "0");
+      return `${anio}-${mes}-${dia}`;
+    }
 
-    return `${anio}-${mes}-${dia}`;
+    fetch("../addons/day.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("No se pudo cargar el archivo JSON.");
+        }
+
+        return response.json();
+      })
+      .then(datos => {
+        const fechaHoy = obtenerFechaLocal();
+        const frase = datos[fechaHoy];
+
+        if (!frase) {
+          estado.textContent =
+            "La frase del día aún no está disponible, pero nuestro equipo no tarda mucho para realizarlo, gracias por la espera. 🙏";
+          return;
+        }
+
+        // Insertar texto de forma segura.
+        cita.textContent = `“${frase["Frase del dia"]}”`;
+        reflexion.textContent = frase["Reflexion del dia"];
+        proposito.textContent = frase["Proposito del Dia"];
+
+        contenido.hidden = false;
+        estado.hidden = true;
+      })
+      .catch(error => {
+        console.error("Error al cargar la frase del día:", error);
+
+        estado.textContent =
+          "No se pudo cargar la frase del día. Inténtalo más tarde.";
+      });
   }
 
-  fetch("../addons/day.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("No se pudo cargar el archivo JSON.");
-      }
+  /* =========================================
+     RADIO VATICAN NEWS
+  ========================================= */
 
-      return response.json();
-    })
-    .then(datos => {
-      const fechaHoy = obtenerFechaLocal();
-      const frase = datos[fechaHoy];
+  const audio = document.getElementById("radio-vatican-audio");
+  const boton = document.getElementById("radio-vatican-play");
+  const textoBoton = document.getElementById("radio-vatican-button-text");
+  const estadoRadio = document.getElementById("radio-vatican-status");
 
-      if (!frase) {
-        estado.textContent =
-          "La frase del día aún no está disponible, pero nuestro equipo no tarda mucho para realizarlo, gracias por la espera. 🙏";
+  // El resto de este bloque solo se ejecuta
+  // en páginas que contienen el reproductor.
+  if (audio && boton && textoBoton && estadoRadio) {
+
+    /* -----------------------------------------
+       METADATOS MULTIMEDIA
+    ----------------------------------------- */
+
+    const datosMultimedia = {
+      title: "Radio Vatican News - ES",
+      artist: "Vatican News",
+      album: "Radio en vivo",
+      artwork: [
+        {
+          src: "../images/altar-radio.webp",
+          type: "image/png"
+        }
+      ]
+    };
+
+    function configurarMetadatos() {
+      if (
+        !("mediaSession" in navigator) ||
+        !("MediaMetadata" in window)
+      ) {
         return;
       }
 
-      // Insertar texto de forma segura.
-      cita.textContent = `“${frase["Frase del dia"]}”`;
-      reflexion.textContent = frase["Reflexion del dia"];
-      proposito.textContent = frase["Proposito del Dia"];
+      navigator.mediaSession.metadata =
+        new MediaMetadata(datosMultimedia);
+    }
 
-      contenido.hidden = false;
-      estado.hidden = true;
-    })
-    .catch(error => {
-      console.error("Error al cargar la frase del día:", error);
+    /* -----------------------------------------
+       CONTROLES MULTIMEDIA DEL DISPOSITIVO
+    ----------------------------------------- */
 
-      estado.textContent =
-        "No se pudo cargar la frase del día. Inténtalo más tarde.";
+    function configurarControlesMultimedia() {
+      if (!("mediaSession" in navigator)) return;
+
+      try {
+        navigator.mediaSession.setActionHandler("play", () => {
+          audio.play().catch(error => {
+            console.error("No se pudo reanudar la radio:", error);
+          });
+        });
+
+        navigator.mediaSession.setActionHandler("pause", () => {
+          audio.pause();
+        });
+
+        navigator.mediaSession.setActionHandler("stop", () => {
+          audio.pause();
+        });
+      } catch (error) {
+        console.warn(
+          "Algunos controles multimedia no están disponibles:",
+          error
+        );
+      }
+    }
+
+    /* -----------------------------------------
+       ESTADO Y BOTÓN DEL REPRODUCTOR
+    ----------------------------------------- */
+
+    function establecerEstado(mensaje) {
+      estadoRadio.textContent = mensaje;
+    }
+
+    function establecerBoton(reproduciendo) {
+      textoBoton.textContent = reproduciendo
+        ? "Pausar"
+        : "Reproducir";
+
+      boton.setAttribute("aria-pressed", String(reproduciendo));
+    }
+
+    boton.addEventListener("click", async () => {
+      if (!audio.paused) {
+        audio.pause();
+        return;
+      }
+
+      establecerEstado("Conectando con Vatican News…");
+      boton.disabled = true;
+
+      try {
+        await audio.play();
+      } catch (error) {
+        console.error("Error al reproducir Vatican News:", error);
+
+        establecerBoton(false);
+        establecerEstado(
+          "No se pudo iniciar la reproducción. Comprueba tu conexión e inténtalo de nuevo."
+        );
+      } finally {
+        boton.disabled = false;
+      }
     });
+
+    /* -----------------------------------------
+       EVENTOS DE AUDIO
+    ----------------------------------------- */
+
+    audio.addEventListener("playing", () => {
+      establecerBoton(true);
+      establecerEstado("En vivo · Vatican News en español");
+
+      configurarMetadatos();
+      configurarControlesMultimedia();
+
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.playbackState = "playing";
+      }
+    });
+
+    audio.addEventListener("pause", () => {
+      establecerBoton(false);
+
+      if (!audio.ended) {
+        establecerEstado("Radio pausada");
+      }
+
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.playbackState = "paused";
+      }
+    });
+
+    audio.addEventListener("waiting", () => {
+      establecerEstado("Cargando señal de radio…");
+    });
+
+    audio.addEventListener("error", () => {
+      establecerBoton(false);
+      establecerEstado(
+        "No se pudo recibir la señal. Intenta nuevamente más tarde."
+      );
+
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.playbackState = "none";
+      }
+    });
+
+    audio.addEventListener("ended", () => {
+      establecerBoton(false);
+      establecerEstado(
+        "La señal terminó. Puedes intentar reproducirla de nuevo."
+      );
+
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.playbackState = "none";
+      }
+    });
+  }
 })();
 </script>
 </body>
