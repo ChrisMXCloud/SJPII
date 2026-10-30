@@ -1,0 +1,109 @@
+        /* Configuración general */
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family:
+                system-ui,
+                'Segoe UI',
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif,
+                'Apple Color Emoji',
+                'Segoe UI Emoji';
+
+            color: #000000;
+            background: #ffffff;
+        }
+
+        /* Contenedor principal */
+        .error-container {
+            min-height: 100vh;
+            min-height: 100svh;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Contenido del error */
+        .error-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            max-width: 100%;
+        }
+
+        /* Código 404 */
+        .error-code {
+            margin: 0;
+            padding-right: 23px;
+
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 49px;
+
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /* Mensaje */
+        .error-message {
+            margin: 0;
+
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        /* Modo oscuro */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #ffffff;
+                background: #000000;
+            }
+
+            .error-code {
+                border-right-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        /* Adaptación para dispositivos móviles */
+        @media (max-width: 400px) {
+            .error-content {
+                gap: 12px;
+            }
+
+            .error-code {
+                padding-right: 12px;
+                font-size: 22px;
+            }
+
+            .error-message {
+                font-size: 13px;
+            }
+        }
+
+        /* Accesibilidad: reducir animaciones */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+            }
+        }
