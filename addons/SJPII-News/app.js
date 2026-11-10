@@ -6,9 +6,9 @@
 ========================= */
 
 const CONFIG = {
-    postsURL: "./data/posts.json",
+    postsURL: "posts/posts.json",
     avatarURL: "https://sanjuanpabloiipomoca.org/images/icon.jpg",
-    verifiedURL: "./assets/verified.svg",
+    verifiedURL: "verified.svg",
 
     updateInterval: 60 * 1000
 };
