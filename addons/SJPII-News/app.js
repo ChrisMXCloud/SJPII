@@ -6,7 +6,7 @@
 ========================= */
 
 const CONFIG = {
-    postsURL: "posts/posts.json",
+    postsURL: "https://sanjuanpabloiipomoca.org/addons/SJPII-News/posts/posts.json",
     avatarURL: "https://sanjuanpabloiipomoca.org/images/icon.jpg",
     verifiedURL: "verified.svg",
 
