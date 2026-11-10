@@ -8,7 +8,7 @@
 const CONFIG = {
     postsURL: "https://sanjuanpabloiipomoca.org/addons/SJPII-News/posts/posts.json",
     avatarURL: "https://sanjuanpabloiipomoca.org/images/icon.jpg",
-    verifiedURL: "verified.svg",
+    verifiedURL: "https://sanjuanpabloiipomoca.org/addons/SJPII-News/verified.svg",
 
     updateInterval: 60 * 1000
 };
