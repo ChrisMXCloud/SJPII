@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta
+        name="description"
+        content="Social Channel: publicaciones oficiales de la Parroquia San Juan Pablo II.">
+        
+    <!-- Icono del Sitio Web -->
+    <link rel="icon" href="https://sanjuanpabloiipomoca.org/images/PSJPII.svg" type="image/png">
+    
+    <title>Canal Oficial - Parroquia San Juan Pablo II</title>
+
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="https://sanjuanpabloiipomoca.org/addons/SJPII-News/style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a
+                href="https://sanjuanpabloiipomoca.org"
+                class="site-logo"
+                aria-label="Social Channel, inicio"
+            >
+            PSanJuanPabloII News
+            </a>
+
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+
+        <!-- PUBLICACIONES -->
+        <section
+            class="feed"
+            aria-label="Publicaciones"
+        >
+
+            <div style="padding-top: 0px;" class="feed-header">
+                <h2>Publicaciones</h2>
+            </div>
+
+            <div
+                id="posts-container"
+                class="posts-container"
+                aria-live="polite"
+                aria-busy="true"
+            >
+
+                <p class="loading-message">
+                    Cargando publicaciones...
+                </p>
+
+            </div>
+
+            <noscript>
+                <p class="noscript-message">
+                    Necesitas activar JavaScript para visualizar
+                    las publicaciones de Social Channel.
+                </p>
+            </noscript>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-information">
+
+                <h2>
+                    Parroquia San Juan Pablo II
+                </h2>
+
+                <p class="footer-location">
+                    Fracc. Pomoca, Nacajuca, Tabasco · México
+                </p>
+
+                <img
+                    src="https://sanjuanpabloiipomoca.org/images/colaboracion.png"
+                    alt="Colaboración"
+                    class="footer-logos"
+                    width="380"
+                    height="auto"
+                    loading="lazy"
+                >
+
+                <p class="footer-copyright">
+                    © <span id="current-year"></span>
+                    - Parroquia San Juan Pablo II Fracc. Pomoca
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- AÑO AUTOMÁTICO -->
+    <script>
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+    <!-- APLICACIÓN -->
+    <script src="https://sanjuanpabloiipomoca.org/addons/SJPII-News/app.js" defer></script>
+
+</body>
+</html>
