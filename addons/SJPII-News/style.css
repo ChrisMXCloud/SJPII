@@ -1,3 +1,4 @@
+
 /* =========================
    VARIABLES GENERALES
 ========================= */
@@ -103,16 +104,27 @@ img {
 
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .site-logo {
-    color: var(--text-primary);
+    display: flex;
+    align-items: center;
 
-    font-size: 21px;
-    font-weight: 800;
+    height: 100%;
+    max-width: 100%;
 
     text-decoration: none;
-    letter-spacing: -0.7px;
+}
+
+.logo-image {
+    display: block;
+
+    width: 220px;
+    height: auto;
+    max-width: 100%;
+
+    object-fit: contain;
 }
 
 
@@ -391,8 +403,8 @@ img {
         height: 58px;
     }
 
-    .site-logo {
-        font-size: 19px;
+    .logo-image {
+        width: 190px;
     }
 
     .main-container {
