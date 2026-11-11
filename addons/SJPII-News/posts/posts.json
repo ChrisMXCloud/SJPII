@@ -3,12 +3,18 @@
         "id": 1,
         "text": "Bienvenidos a PSanJuanPabloII News, el espacio oficial de las noticias, avisos, y invitaciones de nuestra parroquia.",
         "image": null,
-        "publishedAt": "2026-12-01 12:00:00"
+        "publishedAt": "2026-11-01 00:00:00"
     },
     {
         "id": 2,
         "text": "Presentamos, PSanJuanPabloII News, un espacio libre para toda la comunidad parroquian sin acceso a Facebook, creado con tecnología avanzada de ChrisWorld™",
         "image": "https://sanjuanpabloiipomoca.org/images/SJPII-News/Flayer-PSJPII.webp",
-        "publishedAt": "2026-12-01 12:00:00"
+        "publishedAt": "2026-11-01 00:00:00"
+    },
+    {
+        "id": 3,
+        "text": "⛪ Buenas tardes querida comunidad. Les compartimos esta informacion. Apóyanos compartiendo está publicación 👍🏻",
+        "image": "https://sanjuanpabloiipomoca.org/images/SJPII-News/4921057485023748290314781904728401728390157845907.jpg",
+        "publishedAt": "2026-11-10 18:35:00"
     }
 ]
