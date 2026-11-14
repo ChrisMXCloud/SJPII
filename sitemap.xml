@@ -4,15 +4,15 @@
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:fo="http://www.w3.org/1999/XSL/Format"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:fo="http://www.w3.org/1999/XSL/Format"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
-<url> <loc>https://sanjuanpablaiipomoca.org/</loc> <lastmod>2026-06-28T23:26:12+00:00</lastmod> </url>
+<url> <loc>https://sanjuanpabloiipomoca.org/</loc> <lastmod>2026-11-14T12:00:00-06:00</lastmod> </url>
       
-<url> <loc>https://sanjuanpablaiipomoca.org/QueHayDeNuevo</loc> </url>
+<url> <loc>https://sanjuanpabloiipomoca.org/QueHayDeNuevo</loc> <lastmod>2026-11-14T12:00:00-06:00</lastmod> </url>
+      
+<url> <loc>https://sanjuanpabloiipomoca.org/PSJPII-News/</loc> <lastmod>2026-11-14T12:00:00-06:00</lastmod> <url>
 
 </urlset>
