@@ -1,0 +1,1094 @@
+/* =========================
+   ROOT & VARIABLES
+========================= */
+
+:root {
+    color-scheme: light;
+
+    --wine: #3b0d11;
+    --wine-deep: #26080b;
+    --gold: #c7a65b;
+    --ivory: #f5f0e6;
+    --white: #fff;
+    --graphite: #20232b;
+    --surface: #fffdf8;
+    --text: #252329;
+    --muted: #68636a;
+    --line: rgba(59, 13, 17, 0.14);
+    --shadow: 0 18px 55px rgba(28, 10, 12, 0.1);
+
+    --footer-background: #3b0d11;
+    --footer-text: #ffffff;
+    --footer-secondary: #a99a9b;
+
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* =========================
+   RESET & GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--gold);
+    color: var(--wine-deep);
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    background: var(--wine);
+    color: var(--white);
+
+    border-bottom: 1px solid rgba(199, 166, 91, 0.35);
+}
+
+.nav-wrap {
+    width: 100%;
+    max-width: none;
+    min-height: 82px;
+
+    margin: 0;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.brand img {
+    width: 58px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 7px;
+    padding: 3px;
+}
+
+.brand-name {
+    font-family: var(--serif);
+    font-size: 1.08rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
+
+.brand-name span {
+    display: block;
+    margin-top: 4px;
+
+    color: var(--gold);
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2vw, 25px);
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.86rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    padding: 9px 12px;
+
+    color: white;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+
+    color: var(--white);
+
+    background: radial-gradient(ellipse at 78% 20%, rgba(199, 166, 91, 0.18), transparent 34%),
+        linear-gradient(125deg, var(--wine-deep), var(--wine) 62%, #54151b);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -190px;
+    bottom: -250px;
+
+    border: 1px solid rgba(199, 166, 91, 0.35);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 35px rgba(199, 166, 91, 0.035),
+        0 0 0 75px rgba(199, 166, 91, 0.025);
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+
+    width: min(1080px, calc(100% - 40px));
+    min-height: 540px;
+
+    margin: auto;
+    padding: 90px 0 105px;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.hero h1 {
+    max-width: 780px;
+    margin: 19px 0 20px;
+    font-size: clamp(2.65rem, 6.2vw, 5.3rem);
+}
+
+.hero h1 em {
+    color: var(--gold);
+    font-style: normal;
+}
+
+.hero p {
+    max-width: 610px;
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(1rem, 1.7vw, 1.15rem);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 34px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    padding: 11px 21px;
+
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+
+    font-size: 0.9rem;
+    font-weight: 650;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background: var(--gold);
+    color: #24190b;
+}
+
+.button-secondary {
+    color: var(--white);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main section {
+    width: min(1080px, calc(100% - 40px));
+    margin: auto;
+    padding: 88px 0;
+}
+
+.section-heading {
+    max-width: 690px;
+    margin-bottom: 34px;
+}
+
+.section-heading .eyebrow {
+    color: #9b7835;
+}
+
+.section-heading h2 {
+    margin: 10px 0 13px;
+    font-size: clamp(2rem, 4vw, 3.15rem);
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.intro-copy p {
+    margin: 0 0 16px;
+    color: var(--muted);
+}
+
+.quote-panel {
+    padding: 34px;
+
+    border-left: 3px solid var(--gold);
+
+    background: #f5f0e6;
+    background: color-mix(in srgb, var(--wine) 7%, var(--surface));
+
+    box-shadow: var(--shadow);
+}
+
+.quote-panel blockquote {
+    margin: 0;
+
+    font-family: var(--serif);
+    font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+    line-height: 1.4;
+}
+
+.quote-panel p {
+    margin: 17px 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+/* =========================
+   INFORMATION CARDS
+========================= */
+
+.cards-section {
+    width: 100%;
+
+    background: #f5f0e6;
+    background: color-mix(in srgb, var(--ivory) 48%, var(--surface));
+}
+
+.cards-inner {
+    width: min(1080px, calc(100% - 40px));
+    margin: auto;
+    padding: 88px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.info-card {
+    min-height: 205px;
+    padding: 26px;
+
+    border: 1px solid var(--line);
+    background: var(--surface);
+
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.035);
+}
+
+.card-number {
+    color: #9b7835;
+    font-size: 0.75rem;
+    font-weight: 750;
+    letter-spacing: 0.14em;
+}
+
+.info-card h3 {
+    margin: 13px 0 9px;
+    font-size: 1.45rem;
+}
+
+.info-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.93rem;
+}
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community {
+    padding-top: 75px;
+    padding-bottom: 90px;
+}
+
+.community-band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 34px 38px;
+
+    background: var(--wine);
+    color: var(--white);
+}
+
+.community-band h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.community-band p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* =========================
+   FOOTER
+   PARROQUIA SAN JUAN PABLO II
+========================= */
+
+.site-footer {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    margin: 0;
+    padding: 170px 0 60px;
+
+    background: #3b0d11;
+    background-color: var(--footer-background);
+
+    color: var(--footer-text);
+
+    border-radius: 0 0 12px 12px;
+}
+
+.footer-container {
+    width: min(1644px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.footer-information {
+    width: 100%;
+}
+
+.footer-information h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: var(--sans);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.footer-location {
+    margin: 8px 0 34px;
+
+    color: #a99a9b;
+
+    font-family: var(--sans);
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.footer-logos {
+    display: block;
+
+    width: 380px;
+    max-width: 100%;
+    height: auto;
+
+    margin-bottom: 28px;
+
+    object-fit: contain;
+}
+
+.footer-copyright {
+    margin: 0;
+
+    color: #a99a9b;
+
+    font-family: var(--sans);
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE: TABLETS
+========================= */
+
+@media (max-width: 850px) {
+    .nav-wrap {
+        min-height: 74px;
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        padding: 14px 22px 22px;
+
+        background: var(--wine);
+        border-top: 1px solid rgba(199, 166, 91, 0.25);
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 11px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   RESPONSIVE: MOBILE
+========================= */
+
+@media (max-width: 560px) {
+    .brand img {
+        width: 49px;
+        height: 42px;
+    }
+
+    .brand-name {
+        font-size: 0.94rem;
+    }
+
+    .brand-name span {
+        font-size: 0.59rem;
+    }
+
+    .hero-inner {
+        min-height: 500px;
+        padding: 76px 0 86px;
+    }
+
+    main section,
+    .cards-inner {
+        padding-top: 66px;
+        padding-bottom: 66px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-band {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 28px 24px;
+    }
+
+    /* FOOTER MOBILE */
+
+    .site-footer {
+        margin: 0;
+        padding: 90px 0 40px;
+        border-radius: 0;
+    }
+
+    .footer-container {
+        width: calc(100% - 40px);
+    }
+
+    .footer-information h2 {
+        font-size: 21px;
+    }
+
+    .footer-location {
+        margin: 8px 0 28px;
+        font-size: 16px;
+    }
+
+    .footer-logos {
+        width: 300px;
+        margin-bottom: 24px;
+    }
+
+    .footer-copyright {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   FRASES MOTIVADORAS
+   JUNTOS X SAN JUAN PABLO II
+========================================== */
+
+.s-events {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 4rem 0;
+
+    background: #ffffff;
+    color: #20232b;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+========================================== */
+
+.solicitud-servicio {
+    width: 100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.solicitud-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+
+    gap: 65px;
+
+    width: 100%;
+}
+
+/* ==========================================
+   COLUMNA IZQUIERDA
+========================================== */
+
+.solicitud-cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 30px 10px;
+
+    text-align: center;
+}
+
+/* LOGOTIPO */
+
+.solicitud-logo {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 18px;
+}
+
+.solicitud-logo img {
+    display: block;
+
+    width: 300px;
+    max-width: 85%;
+    height: auto;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+/* PRESENTACIÓN */
+
+.solicitud-intro {
+    width: 100%;
+    max-width: 720px;
+
+    text-align: center;
+}
+
+.solicitud-intro .presenta {
+    margin: 0 0 15px;
+
+    color: #252329;
+
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* DESCRIPCIÓN */
+
+.solicitud-descripcion {
+    margin: 0;
+
+    color: #252329;
+
+    font-family: var(--serif);
+    font-size: clamp(18px, 1.5vw, 23px);
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+.solicitud-descripcion b {
+    font-weight: 700;
+}
+
+/* ==========================================
+   COLUMNA DERECHA
+========================================== */
+
+.solicitud-panel {
+    width: 100%;
+    min-width: 0;
+}
+
+.frase-panel {
+    padding: 35px 0 0;
+}
+
+/* ==========================================
+   CONTENIDO DINÁMICO
+========================================== */
+
+.frase-contenido {
+    display: block;
+    width: 100%;
+}
+
+/* Respeta el atributo hidden controlado por JS */
+
+.frase-contenido[hidden] {
+    display: none !important;
+}
+
+/* ==========================================
+   FRASE DEL DÍA
+========================================== */
+
+.frase-cita {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: #171717;
+
+    font-family: var(--serif);
+    font-size: clamp(20px, 1.55vw, 25px);
+    font-weight: 400;
+    font-style: italic;
+
+    line-height: 1.75;
+    text-align: center;
+}
+
+/* SEPARADOR */
+
+.frase-separador {
+    width: 68px;
+    height: 4px;
+
+    margin: 40px auto 30px;
+
+    background: #c5c5c5;
+
+    border-radius: 10px;
+}
+
+/* ==========================================
+   REFLEXIÓN DEL DÍA
+========================================== */
+
+.frase-subtitulo {
+    margin: 0 0 16px;
+
+    color: #171717;
+
+    font-family: var(--sans);
+    font-size: 20px;
+    font-weight: 750;
+
+    line-height: 1.4;
+}
+
+.frase-reflexion {
+    margin: 0;
+
+    color: #252329;
+
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1.85;
+}
+
+/* ==========================================
+   PROPÓSITO DEL DÍA
+========================================== */
+
+.frase-proposito {
+    margin-top: 32px;
+    padding: 23px 26px;
+
+    background: #f3f3f3;
+
+    border-radius: 16px;
+}
+
+.frase-proposito h4 {
+    margin: 0 0 12px;
+
+    color: #171717;
+
+    font-family: var(--sans);
+    font-size: 20px;
+    font-weight: 750;
+
+    line-height: 1.4;
+}
+
+.frase-proposito p {
+    margin: 0;
+
+    color: #252329;
+
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1.85;
+}
+
+/* ==========================================
+   ESTADO DE CARGA Y ERRORES
+========================================== */
+
+.frase-estado {
+    width: 100%;
+
+    margin: 25px 0;
+
+    color: #68636a;
+
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+.frase-estado[hidden] {
+    display: none !important;
+}
+
+/* ==========================================
+   PANTALLAS GRANDES
+   PC, MONITORES Y TELEVISORES
+========================================== */
+
+@media (min-width: 1600px) {
+    .solicitud-servicio {
+        padding: 0 60px;
+    }
+
+    .solicitud-layout {
+        gap: 80px;
+    }
+
+    .solicitud-logo img {
+        width: 400px;
+    }
+
+    .solicitud-descripcion {
+        font-size: 24px;
+    }
+
+    .frase-cita {
+        font-size: 26px;
+    }
+}
+
+/* ==========================================
+   TABLETS HORIZONTALES
+========================================== */
+
+@media (max-width: 1100px) {
+    .solicitud-servicio {
+        padding: 0 30px;
+    }
+
+    .solicitud-layout {
+        gap: 40px;
+    }
+
+    .solicitud-logo img {
+        width: 300px;
+    }
+
+    .solicitud-descripcion {
+        font-size: 19px;
+    }
+
+    .frase-cita {
+        font-size: 21px;
+    }
+
+    .frase-reflexion,
+    .frase-proposito p {
+        font-size: 17px;
+    }
+}
+
+/* ==========================================
+   TABLETS VERTICALES Y PANTALLAS PEQUEÑAS
+========================================== */
+
+@media (max-width: 760px) {
+    .s-events {
+        padding: 55px 0;
+    }
+
+    .solicitud-servicio {
+        padding: 0 25px;
+    }
+
+    .solicitud-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .solicitud-cabecera {
+        padding: 10px 0;
+    }
+
+    .solicitud-logo img {
+        width: 310px;
+        max-width: 80%;
+    }
+
+    .solicitud-descripcion {
+        font-size: 19px;
+    }
+
+    .frase-panel {
+        padding-top: 10px;
+    }
+
+    .frase-cita {
+        font-size: 22px;
+    }
+
+    .frase-separador {
+        margin: 30px auto;
+    }
+}
+
+/* ==========================================
+   MÓVILES
+========================================== */
+
+@media (max-width: 480px) {
+    .s-events {
+        padding: 40px 0 55px;
+    }
+
+    .solicitud-servicio {
+        padding: 0 20px;
+    }
+
+    .solicitud-layout {
+        gap: 25px;
+    }
+
+    .solicitud-logo img {
+        width: 260px;
+        max-width: 85%;
+    }
+
+    .solicitud-intro .presenta {
+        font-size: 20px;
+    }
+
+    .solicitud-descripcion {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .frase-cita {
+        font-size: 19px;
+        line-height: 1.7;
+    }
+
+    .frase-separador {
+        width: 55px;
+        margin: 28px auto;
+    }
+
+    .frase-subtitulo,
+    .frase-proposito h4 {
+        font-size: 18px;
+    }
+
+    .frase-reflexion,
+    .frase-proposito p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .frase-proposito {
+        margin-top: 25px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .s-events *,
+    .s-events *::before,
+    .s-events *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
