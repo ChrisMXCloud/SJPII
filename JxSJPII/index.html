@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3b0d11" />
+    <meta name="description" content="Juntos X San Juan Pablo II" />
+    <title>Juntos X San Juan Pablo II</title>
+    <link rel="icon" type="image/svg+xml" href="https://sanjuanpabloiipomoca.org/images/JxSJPII.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="#inicio" aria-label="Juntos X San Juan Pablo II, inicio">
+          <img src="https://sanjuanpabloiipomoca.org/images/JxSJPII.svg" alt="Logotipo de Juntos X San Juan Pablo II" />
+          <span class="brand-name">Juntos x San Juan Pablo II<span>JxSJPII</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menú</button>
+        <nav class="nav-links" id="site-navigation" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="https://sanjuanpabloiipomoca.org">Sitio Oficial de la Parroquia San Juan Pablo II</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-inner">
+          <span class="eyebrow">Fe · Comunidad · Servicio</span>
+          <h1>Juntos, siguiendo el ejemplo de <em>San Juan Pablo II.</em></h1>
+          <p>
+            Un espacio para compartir la fe, acercarnos a Jesucristo y construir el bien mediante la evangelización y el
+            servicio virtual.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#nosotros">Conócenos</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros">
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <div class="section-heading">
+              <span class="eyebrow">Quiénes somos</span>
+              <h2>Una comunidad que busca hacer el bien</h2>
+              <p>
+                Juntos x San Juan Pablo II es una iniciativa de evangelización y participación comunitaria que busca
+                acercar el mensaje de Jesucristo a través de medios actuales como la tecnología, la oración y el
+                servicio.
+              </p>
+            </div>
+            <p>
+              Nuestra inspiración es el testimonio de San Juan Pablo II y su llamado a vivir la fe con esperanza,
+              compromiso y cercanía con los demás. Así como la frase que nos motivo hacerlo de nuestro Papa Juan Pablo
+              II: "No tengaís Miedo, Abrid de par en par las puertas a Cristo"
+            </p>
+          </div>
+          <aside class="quote-panel">
+            <blockquote>«Juntos x San Juan Pablo II y Avanzaremos Juntos».</blockquote>
+            <p>Lema de Juntos x San Juan Pablo II</p>
+          </aside>
+        </div>
+      </section>
+
+      <div class="cards-section">
+        <section class="cards-inner" aria-label="Explora el contenido">
+          <div class="section-heading">
+            <span class="eyebrow">Conoce y participa</span>
+            <h2>Un espacio para crecer en la fe</h2>
+            <p>Conoce nuestra llegada a la Parroquia.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="info-card" id="san-juan-pablo-ii">
+              <span class="card-number">01 / INSPIRACIÓN</span>
+              <h3>San Juan Pablo II</h3>
+              <p>Nos inspiramos gracias a sus reflexiones y frases que nos motivaron a empezar.</p>
+            </article>
+            <article class="info-card" id="oraciones">
+              <span class="card-number">02 / ORACIÓN</span>
+              <h3>Oraciones y Vocación</h3>
+              <p>
+                Gracias a las personas que desde el primer dia estuvieron con nosotros, creamos lo que Dios nos dijo
+                atravez de las llamadas que el hizo por medio de la Vocación.
+              </p>
+            </article>
+            <article class="info-card" id="evangelizacion">
+              <span class="card-number">03 / REFLEXIÓN</span>
+              <h3>Evangelización</h3>
+              <p>
+                Nosotros estudiamos poco a poco lo que es de nuestro Catolicismo con eso los guíamos a ustedes a una
+                vida de Dios.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section id="eventosdefiestapatronal" class="s-events">
+        <section class="solicitud-servicio">
+          <div class="solicitud-layout">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="solicitud-cabecera">
+              <div class="solicitud-logo">
+                <img src="https://sanjuanpabloiipomoca.org/images/JxSJPII.svg" alt="Juntos x San Juan Pablo II" />
+              </div>
+
+              <div class="solicitud-intro">
+                <p class="presenta">- PRESENTA -</p>
+
+                <p class="solicitud-descripcion">
+                  La inspiración de nuestro equipo nos trajo hasta aqui... <br />
+                  El Santo Evangelio de hoy.
+                </p>
+              </div>
+            </div>
+
+            <!-- COLUMNA DERECHA -->
+            <div class="solicitud-panel frase-panel" id="fraseDelDia">
+              <div class="frase-contenido" id="fraseContenido" hidden>
+                <blockquote class="frase-cita" id="fraseCita"></blockquote>
+
+                <div class="frase-separador"></div>
+
+                <h4 class="frase-subtitulo">Reflexión del día</h4>
+
+                <p class="frase-reflexion" id="fraseReflexion"></p>
+
+                <div class="frase-proposito">
+                  <h4>Propósito del día</h4>
+
+                  <p id="fraseProposito"></p>
+                </div>
+              </div>
+
+              <p class="frase-estado" id="fraseEstado" role="status">Cargando la frase del día...</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-information">
+          <h2>Parroquia San Juan Pablo II</h2>
+
+          <p class="footer-location">Fracc. Pomoca, Nacajuca, Tabasco · México</p>
+
+          <img
+            src="https://sanjuanpabloiipomoca.org/images/colaboracion.png"
+            alt="Parroquia San Juan Pablo II, Juntos X San Juan Pablo II y ChrisWorld"
+            class="footer-logos" />
+
+          <p class="footer-copyright">© 2026 - Parroquia San Juan Pablo II Fracc. Pomoca</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bienvenida universal -->
+    <div id="bienvenida-universal" class="bienvenida-universal" role="status" aria-live="polite" hidden></div>
+    <script src="https://sanjuanpabloiipomoca.org/addons/bienvenida.js" defer></script>
+
+    <script>
+      const menuButton = document.querySelector(".menu-toggle");
+      const navigation = document.querySelector(".nav-links");
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        navigation.classList.toggle("is-open", !isOpen);
+      });
+
+      navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navigation.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      (() => {
+        /* =========================================
+       FRASE DEL DÍA
+       JUNTOS X SAN JUAN PABLO II
+    ========================================= */
+
+        const contenedor = document.getElementById("fraseDelDia");
+
+        if (!contenedor) return;
+
+        const contenido = document.getElementById("fraseContenido");
+        const cita = document.getElementById("fraseCita");
+        const reflexion = document.getElementById("fraseReflexion");
+        const proposito = document.getElementById("fraseProposito");
+        const estado = document.getElementById("fraseEstado");
+
+        // Comprobar que todos los elementos necesarios existen.
+        if (!contenido || !cita || !reflexion || !proposito || !estado) {
+          console.error("No se encontraron todos los elementos de Frase del día.");
+          return;
+        }
+
+        // Mostrar el estado de carga.
+        contenido.hidden = true;
+        estado.hidden = false;
+        estado.textContent = "Cargando la frase del día...";
+
+        /* =========================================
+       OBTENER FECHA LOCAL
+       Evita diferencias por UTC.
+    ========================================= */
+
+        function obtenerFechaLocal() {
+          const fecha = new Date();
+
+          const anio = fecha.getFullYear();
+          const mes = String(fecha.getMonth() + 1).padStart(2, "0");
+          const dia = String(fecha.getDate()).padStart(2, "0");
+
+          return `${anio}-${mes}-${dia}`;
+        }
+
+        /* =========================================
+       CARGAR ARCHIVO JSON
+    ========================================= */
+
+        fetch("https://sanjuanpabloiipomoca.org/addons/day.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("No se pudo cargar el archivo JSON.");
+            }
+
+            return response.json();
+          })
+
+          .then((datos) => {
+            const fechaHoy = obtenerFechaLocal();
+            const frase = datos[fechaHoy];
+
+            /* =====================================
+               COMPROBAR DISPONIBILIDAD
+            ===================================== */
+
+            if (!frase) {
+              estado.textContent =
+                "La frase del día aún no está disponible, pero nuestro equipo no tarda mucho para realizarlo, gracias por la espera. 🙏";
+
+              return;
+            }
+
+            /* =====================================
+               INSERTAR CONTENIDO
+            ===================================== */
+
+            const textoCita = frase["Frase del dia"];
+            const textoReflexion = frase["Reflexion del dia"];
+            const textoProposito = frase["Proposito del Dia"];
+
+            if (!textoCita || !textoReflexion || !textoProposito) {
+              throw new Error("Los datos de la frase están incompletos.");
+            }
+
+            // Insertar texto de forma segura.
+            cita.textContent = `“${textoCita}”`;
+
+            reflexion.textContent = textoReflexion;
+
+            proposito.textContent = textoProposito;
+
+            /* =====================================
+               MOSTRAR CONTENIDO
+            ===================================== */
+
+            contenido.hidden = false;
+            estado.hidden = true;
+          })
+
+          .catch((error) => {
+            console.error("Error al cargar la frase del día:", error);
+
+            contenido.hidden = true;
+            estado.hidden = false;
+
+            estado.textContent = "No se pudo cargar la frase del día. Inténtalo más tarde.";
+          });
+      })();
+    </script>
+  </body>
+</html>
