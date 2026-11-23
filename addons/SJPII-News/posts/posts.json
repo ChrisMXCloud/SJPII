@@ -1,20 +1,44 @@
 [
     {
         "id": 1,
-        "text": "Bienvenidos a PSanJuanPabloII News, el espacio oficial de las noticias, avisos, y invitaciones de nuestra parroquia.",
-        "image": null,
-        "publishedAt": "2026-11-01 00:00:00"
-    },
-    {
-        "id": 2,
         "text": "Presentamos, PSanJuanPabloII News, un espacio libre para toda la comunidad parroquian sin acceso a Facebook, creado con tecnología avanzada de ChrisWorld™",
         "image": "https://sanjuanpabloiipomoca.org/images/SJPII-News/Flayer-PSJPII.webp",
         "publishedAt": "2026-11-01 00:00:00"
     },
     {
-        "id": 3,
+        "id": 2,
         "text": "⛪ Buenas tardes querida comunidad. Les compartimos esta informacion. Apóyanos compartiendo está publicación 👍🏻",
         "image": "https://sanjuanpabloiipomoca.org/images/SJPII-News/4921057485023748290314781904728401728390157845907.jpg",
+        "publishedAt": "2026-11-10 18:35:00"
+    },
+    {
+        "id": 3,
+        "text": "La libreria Wadowice nos comenta que ya tiene disponible lo siguiente:",
+        "image": "https://scontent.ftgz4-1.fna.fbcdn.net/v/t39.99422-6/911422653_1666741368427002_3485017450525160901_n.png?stp=dst-jpg_tt6&cstp=mx896x1195&ctp=s590x590&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEKJ7H3RlAYzHAFLENg70_DLA7IqOkC9cAsDsio6QL1wPYdX_bGvDSqIGxHJKhByI6Sb6mXtx0FskIlcS9bxtMe&_nc_ohc=ERUcsitHc38Q7kNvwGKlnJ_&_nc_oc=Adoswfen2Yo9GkLBRV1IccSJfgNP-Kjrea3-bhHaAuHPZwqTZSOfFp7YDLpm7PvbroI&_nc_zt=14&_nc_ht=scontent.ftgz4-1.fna&_nc_gid=VWdTuKIk8s7vdrMDrFGI1Q&_nc_ss=7b2a8&oh=00_AQRySCHjp3HHaVCrWwbe2Xo5YTJXlcHMfehvvue1q7Xifw&oe=6B094298",
+        "publishedAt": "2026-11-10 18:35:00"
+    },
+        {
+        "id": 4,
+        "text": "La libreria Wadowice nos comenta que ya tiene disponible lo siguiente:",
+        "image": "https://scontent.ftgz4-1.fna.fbcdn.net/v/t39.99422-6/911573265_2019323962021214_7897108448730182797_n.png?stp=dst-jpg_tt6&cstp=mx768x1376&ctp=s590x590&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEfT5pjAnAy03pIof0SLo9Z3KERDQZcXZPcoRENBlxdkw6aSHER3hALwc4SgRnNRDmFnixt9zv6f0pqOlSe4GHt&_nc_ohc=Evm8LvCH_bYQ7kNvwHPO3P9&_nc_oc=AdoTUu1zI6feNFAXQG4g8r_7KyRnEoCoKZOeF0-ya6KEOusDLgvZxoutoA1846cYPdo&_nc_zt=14&_nc_ht=scontent.ftgz4-1.fna&_nc_gid=VWdTuKIk8s7vdrMDrFGI1Q&_nc_ss=7b2a8&oh=00_AQTKq4Nk-6TnZjXDdgsXmQbDzNKSwZM7hnB05HolmJvitw&oe=6B094737",
+        "publishedAt": "2026-11-10 18:35:00"
+    },
+        {
+        "id": 5,
+        "text": "La libreria Wadowice nos comenta que ya tiene disponible lo siguiente:",
+        "image": "https://scontent.ftgz4-1.fna.fbcdn.net/v/t39.99422-6/913181103_1445972143780649_2405496712642020374_n.png?stp=dst-jpg_tt6&cstp=mx896x1200&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFdP5zgv9n2KpPtP2JIypcQiSENP2kmjnWJIQ0_aSaOdfvuAawI9zR9aFLsrg2MLa53_Zg0HDXXZ3GD9DVqScTF&_nc_ohc=qCoMurO0tLEQ7kNvwFxcO5g&_nc_oc=AdrRMLnm1DxxwLv8aynsEadWdrvXt3DzNzcmI2t1aOKCB3WPcdSpSgtxn0-mQj-3uVw&_nc_zt=14&_nc_ht=scontent.ftgz4-1.fna&_nc_gid=VWdTuKIk8s7vdrMDrFGI1Q&_nc_ss=7b2a8&oh=00_AQQGZpPJxNGoBOk_keDO6IJh5InPm1vtniMZqTflexkk8g&oe=6B094EBE",
+        "publishedAt": "2026-11-10 18:35:00"
+    },
+        {
+        "id": 6,
+        "text": "La libreria Wadowice nos comenta que ya tiene disponible lo siguiente:",
+        "image": "https://scontent.ftgz4-1.fna.fbcdn.net/v/t39.99422-6/914068589_1830907804804767_4475814385111094510_n.png?stp=dst-jpg_tt6&cstp=mx896x1200&ctp=s590x590&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHMLjM8t0Q0uaIpRUXSrwdkiebAKXx3rruJ5sApfHeuu6ZpHjwM9BLy7ghOLwHDpycKz_aHiEr6K8kSsXYAQ9JY&_nc_ohc=R7g1wFsG6rAQ7kNvwEGW0IV&_nc_oc=AdrMBHYxDais5gQw9GVXVDTmBNrRAJ8cnCgH0DkEFuc-nbQjhm6v9LuKw1ZJRDZHIJM&_nc_zt=14&_nc_ht=scontent.ftgz4-1.fna&_nc_gid=VWdTuKIk8s7vdrMDrFGI1Q&_nc_ss=7b2a8&oh=00_AQTcV1nSj2VwcOxRVKue1bYMWTJN55bERhBtO6fMWloh0Q&oe=6B096E2A",
+        "publishedAt": "2026-11-10 18:35:00"
+    },
+        {
+        "id": 7,
+        "text": "La libreria Wadowice nos comenta que ya tiene disponible lo siguiente:",
+        "image": "https://scontent.ftgz4-1.fna.fbcdn.net/v/t39.99422-6/912747528_1801638721090628_65045178440737161_n.png?stp=dst-jpg_tt6&cstp=mx896x1200&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE1xK3e9yFyNl4-z4B91QCWd2lKknMGSRN3aUqScwZJE20w1VwbEgruFaavNe0G3P0sb2yY8VtgQcNXY5jh5zu8&_nc_ohc=4DtCKpwdtRMQ7kNvwETdXmM&_nc_oc=Adq06nmlhxRQJonjQcc_54jrLxTa7bca_EMS5haBaN20g7oW17LAMbjMFZQQ7nGuLcI&_nc_zt=14&_nc_ht=scontent.ftgz4-1.fna&_nc_gid=VWdTuKIk8s7vdrMDrFGI1Q&_nc_ss=7b2a8&oh=00_AQTkGPu1BYLSN_AnqaGa6riOnUW6Bh-NMMD1hI3YpjLu5Q&oe=6B095EE7",
         "publishedAt": "2026-11-10 18:35:00"
     }
 ]
